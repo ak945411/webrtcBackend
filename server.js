@@ -1,6 +1,6 @@
-// const host = "localhost";
+const host = "localhost";
 const port = "3001";
-const host = "192.168.0.105";
+// const host = "192.168.0.105";
 
 const express = require("express");
 const app = express();
