@@ -15,7 +15,7 @@ const server = http.Server(app);
 const socketIO = require("socket.io");
 const io = socketIO(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://192.168.0.105:5173", "https:sangya.web.app"],
+    origin: ["http://localhost:5173", "http://192.168.0.105:5173", "https://sangya.web.app"],
     methods: ["GET", "POST"],
   },
 });
@@ -24,7 +24,7 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
-  cors({ origin: ["http://localhost:5173", "http://192.168.0.105:5173", "https:sangya.web.app"] })
+  cors({ origin: ["http://localhost:5173", "http://192.168.0.105:5173", "https://sangya.web.app"] })
 );
 
 app.get("/stream", (req, res) => {
