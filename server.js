@@ -1,4 +1,5 @@
-const host = "localhost";
+// const host = "localhost";
+const host = "0.0.0.0";
 const port = "3001";
 // const host = "192.168.0.105";
 
