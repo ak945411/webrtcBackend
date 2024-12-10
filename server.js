@@ -15,7 +15,7 @@ const server = http.Server(app);
 const socketIO = require("socket.io");
 const io = socketIO(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://192.168.0.105:5173"],
+    origin: ["http://localhost:5173", "http://192.168.0.105:5173", "https:sangya.web.app"],
     methods: ["GET", "POST"],
   },
 });
@@ -23,7 +23,9 @@ const io = socketIO(server, {
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({ origin: ["http://localhost:5173", "http://192.168.0.105:5173"] }));
+app.use(
+  cors({ origin: ["http://localhost:5173", "http://192.168.0.105:5173", "http:sangya.web.app"] })
+);
 
 app.get("/stream", (req, res) => {
   res.sendFile("public/index.html", { root: __dirname });
